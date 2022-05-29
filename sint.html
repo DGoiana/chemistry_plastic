@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e12d123c9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" class="body">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: none; font-family: 'Amatic SC', cursive; font-size: 150%;">
+        <div class="container-fluid">
+          <ul class="navbar-nav" id="navbar">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="dropdown nav-link" data-bs-toggle="dropdown" style="color: black; padding-right: 20px; text-decoration: none;" href="#section2">
+                  Plásticos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item bgg" style="font-size: x-large;"  href="index.html#section1">História</a></li>
+                  <li><a class="dropdown-item bgg" style="font-size: x-large;" href="index.html#section2">Aplicações</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: black; padding-right: 20px; text-decoration: none;" href="index.html#section4">
+                  Polímeros
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: black; padding-right: 20px; text-decoration: none;" href="index.html#section5">
+                  Novos materiais
+                </a>
+            </li>
+          </ul>
+          <i class="fa-solid fa-bars fa-xs" data-bs-toggle="offcanvas" data-bs-target="#demo" style="cursor: pointer;"></i>
+        </div>
+      </nav>
+      <div class="offcanvas offcanvas-end " id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Menu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" style="font-size: smaller;"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p><a href="react.html" style="font-size: 130%">Reação por adição</a></p>
+          <p><a style="font-size: 130%" href="react_c.html">Reação por condensação</a></p>
+          <p><a style="font-size: 130%" href="comp.html">Famílias de compostos</a></p>
+        </div>
+      </div>
+      <h1 style="margin-top: 7%;">Copolímeros e Homopolímeros</h1>
+      <h3 style="padding-top: 30px;">Quando falamos em <u>polimerização</u> podemos também falar numa <u>reação química em cadeia</u> entre moléculas de monómeros</h3>
+      <img src="1.png" class="sint-center" style="position: relative; margin-top: 5%; padding: 0;">
+      <h3>Há uma unidade estrutural que se repete ao longo da cadeia da macromolécula, essa unidade designa-se por <u>motivo</u></h3>
+      <h3>Este motivo tem origem no <u>monómero</u> etileno</h3>
+      <img src="2.png" class="sint-center" style="position: relative; margin-top: 7%; width: 10%; padding: 0;">
+      <h3>Atendendo ao motivo que se repete, podemos representar o <b>PE</b> pela imagem acima</h3>
+      <h3>A letra n indica o número de vezes que o motivo se repete, isto corresponde ao chamado <u>grau de polimerização</u></h3>
+      <h3 style="padding-top: 50px;">Uma macromolécula de politetileno contém, tipicamente, de <u>10.000 a 20.000 unidades</u> do respetivo motivo, o que corresponde a uma massa molar de <u>280.000 a 560.000 g/mol</u></h3> 
+      <h3>Apesar da designação, no polietileno, não há ligações duplas, por isso, este designa-se por um <u>hidrocarboneto saturado</u></h3>
+      <h3 style="padding-top: 50px;">É devido à impossibilidade prática de controlar a reação de polimerização que se obtém macromoléculas de tamanhos variados, conforme o grau de polimerização</h3>
+      <h3>Por isso, se refere a uma <u>cadeia polimérica média</u></h3>
+      <img src="graph.png" class="sint-center" style="position: relative; margin-top: 15%; padding: 0; width: 45%; left: 51%; margin-bottom: 0;">
+      <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos < currentScrollPos) {
+            document.getElementById("navbar").style.opacity = "0%";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    
+        $('#navbar').hover( function() {
+          document.getElementById("navbar").style.opacity = "100%";
+        }
+        )
+    
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+      </script>
+</body>
+</html>
